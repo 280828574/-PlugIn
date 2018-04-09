@@ -1,0 +1,147 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery手机微信夹娃娃机游戏代码</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<script src="js/jquery-1.11.0.min.js"></script>
+
+<style>
+*{margin:0;padding:0;list-style:none;text-decoration:none;}
+html,body{width:100%;height:100%;overflow:hidden;}
+.box{width:100%;height:100%;background:url(images/zwwbj.jpg) no-repeat center;background-size:cover;}
+.paw{width:100%;height:20px;background:#8d3835;position:relative;box-shadow:2px 2px 5px rgba(0,0,0,0.3)}
+.pawer{width:10px;background:#565656;height:20px;position:absolute;top:20px;left:50%;margin-left:-5px;box-shadow:2px 2px 5px rgba(0,0,0,0.3)}
+.pawerPic{width:110px;height:85px;position:absolute;top:40px;left:50%;margin-left:-55px;}
+.lose{width:100px;height:85px;display:block;margin:0 auto;}
+.pawerPic.on .lose{display:none;}
+.pawerPic.on .win{display:block;}
+.win{width:110px;height:105px;display:none;margin:0 auto; background:url(images/jiazi2.png);background-size:cover;overflow:hidden;}
+.win img{display:block;margin:0 auto;margin-top:12px;}
+.btn{width:120px;height:120px;position:absolute;bottom:0;left:50%;margin-left:-60px;}
+.btn2{width:120px;height:120px;position:absolute;bottom:0;left:50%;margin-left:-60px;background:url(images/kaishi2.png) no-repeat center;background-size:contain;display:none;}
+.btn.on .btn_star{display:none;}
+.btn_star{background:url(images/kaishi.png) no-repeat center;background-size:contain;width:120px;height:120px;}
+.btn_end{background:url(images/kaishi2.png) no-repeat center;background-size:contain;width:120px;height:120px;}
+.area{width:100%;height:auto;overflow:hidden;position:absolute;top:40px;left:0;}
+/*娃娃滚动*/
+#pack{width:100%;height:90px;white-space:nowrap;overflow:hidden;position:absolute;bottom:0;left:0;}
+#sel1,#sel2{display:inline;}
+#pack img{display:inline-block;height:90px;}
+</style>
+
+</head>
+<body>
+<!--盒子-->
+<div class="box">
+	<!--爪子-->
+    <div class="paw">
+    	<div class="pawer"></div>
+        <div class="pawerPic">
+			<img src="images/jiazi.png" class="lose">
+            <div class="win">
+            	<img src="images/mks1.png">
+            </div>
+        </div>
+    </div>
+    <!--区域-->
+    <div class="area">
+    	<!--娃娃滚动-->
+        <div id="pack">
+			<div id="sel1">
+    			<img src="images/mks1.png" tr="1">
+        		<img src="images/mks2.png" tr="2">
+        		<img src="images/mks3.png" tr="3">
+        		<img src="images/mks4.png" tr="4">
+        		<img src="images/mks5.png" tr="5">
+        		<img src="images/mks6.png" tr="6">
+        		<img src="images/mks7.png" tr="7">
+        		<img src="images/mks8.png" tr="8">
+    		</div>
+    		<div id="sel2"></div>
+		</div>
+    </div>
+    <!--按钮(真)-->
+    <div class="btn">
+    	<!--点击前-->
+        <div class="btn_star"></div>
+        <!--点击后-->
+        <div class="btn_end"></div>
+    </div>
+</div>
+
+<script>
+window.onload=function(){
+	var k=0;//可以点击
+	var c=0;//娃娃的
+	scrollLeft();//娃娃滚动
+	var talon=$(".pawerPic").offset().left+55//首先获取爪子的位置(这里是固定的)
+	console.log(talon)
+	/*声明变量*/
+	var areaHeight=$("body").height()-150//活动区域的高
+	var long=areaHeight-115//爪子伸长的距离(目前娃娃的高度暂定为115px;)
+	/*赋值给活动区域高度*/
+	$(".area").css({height:areaHeight})
+	/*娃娃滚动*/
+	function scrollLeft(){
+	var speed=20;
+	var yu=$("#sel1").html();
+	$("#sel2").html(yu);
+		function Marquee(){
+		c++
+		if($("#sel2").width()-$("#pack").scrollLeft()<=0){
+		c=0        
+		$("#pack").scrollLeft(c);
+			}else{
+			$("#pack").scrollLeft(c);
+			}
+		}//Marquee结束
+		var timer=setInterval(Marquee,speed);
+		/*点击按钮*/
+		$(".btn_star").bind('touchstart',function(){
+			$(this).css({display:"none"})//单纯的按钮样式
+			$(".pawer").animate({height:long},2000);//伸下去(绳子)
+			$(".pawerPic").animate({top:long+20},2000);//伸下去(爪子)
+			/*抓到娃娃*/
+			function fn(t_img){
+			$(".pawerPic").addClass("on");
+			$(".win img").attr("src",t_img)
+		};
+			/*娃娃消失*/
+			function end(){
+			$(".pawerPic").removeClass("on")
+			}
+			/*按钮点击*/
+			function btn(){
+			$(".btn_star").css({display:"block"})
+			}//控制按钮是否可以点击
+			/*判断抓没抓到娃娃*/
+			if_ok=setTimeout(ok_no,2000);
+			function ok_no(){
+				/*打印出此时此刻每个娃娃的位置*/
+				for(var i=0;i<$("#pack img").length;i++){
+				var l=$("#pack img").eq(i).offset().left+41.61//此时此刻每个娃娃的位置
+				if(l-20<=talon&&talon<=l+20){
+
+					var t_img=$("#pack img").eq(i).attr("src")
+					time_zz=setTimeout(fn(t_img),0)
+					return
+				}
+				/*然后和爪子的位置进行比较*/
+					console.log("狗屎都没抓到")
+					
+				}
+			}
+			/*事件调用*/
+			//time_zz=setTimeout(fn,2000);//抓到娃娃
+			time_xs=setTimeout(end,4000);//娃娃消失
+			time_ww=setTimeout(btn,4000);//按钮点击
+			$(".pawer").animate({height:20},2000);//缩回来(绳子)
+			$(".pawerPic").animate({top:40},2000);//缩回来(爪子)
+			})
+	}//scrollLeft结束
+}//window.onload结束
+</script>
+</body>
+</html>

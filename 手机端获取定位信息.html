@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>手机端获取定位信息</title>
+</head>
+
+<body>
+
+<div class="home-position" onclick="getLocation()">
+				<i class="pos-icon"></i>
+				<span class="dw-current">123</span>
+			</div>
+			
+			
+			<script>
+	
+		function getLocation()
+		{
+			if (navigator.geolocation)
+			{
+				navigator.geolocation.getCurrentPosition(showPosition);
+			}
+			else
+			{
+				x.innerHTML="该浏览器不支持获取地理位置。";
+			}
+		}
+	
+		// 初始化获取用户当前位置
+		getLocation();
+		function showPosition(position)
+		{
+			var url='http://api.map.baidu.com/geocoder/v2/?callback=?&location='+position.coords.latitude + ',' + position.coords.longitude+'&output=json&pois=1&ak=NHI1YsaIoztbunuHZoQerG6n';
+			$.getJSON(url, function(data) {
+				$('span.dw-current').html(data.result.formatted_address);
+			});
+		}
+	</script>
+</body>
+</html>

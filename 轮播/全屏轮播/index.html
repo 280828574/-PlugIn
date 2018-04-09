@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>js实现微运网站全屏宽屏图片轮播切换幻灯片特效-xw素材网</title>
+    <link rel="stylesheet" type="text/css" href="statics/index/css/style.css">
+</head>
+<body>
+
+
+<div class="wrap">
+    <div class="banner">
+        <div class="container">
+            <a class="btn_use" href="http://www.xwcms.net" target="_blank">马上使用</a>
+        </div>
+        <div class="focus">
+            <div id="focusPic" class="sliderwrapper">
+                <div class="contentdiv" style="display:block;">
+                    <div class="f_pic focus_1"></div>
+                </div>
+                <div class="contentdiv">
+                    <div class="f_pic focus_2"></div>
+                </div>
+                <div class="contentdiv">
+                    <div class="f_pic focus_3"></div>
+                </div>
+            </div>
+            <div id="paginate-focusPic" class="pagination">
+                <i class="toc"></i><i class="toc"></i><i class="toc"></i><i class="toc"></i>
+            </div>
+        </div>
+    </div><!--/banner-->
+
+
+</div>
+
+<script src="statics/index/js/slider.js"></script>
+<script type="text/javascript">
+    featuredcontentslider.init({id: "focusPic",contentsource: ["inline", ""],toc: "#increment",nextprev: ["", ""], revealtype: "mouseover", enablefade: [true, 0.15], autorotate: [true, 3000], delay: 150,onChange: function(previndex, curindex){}});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery无缝滚动插件支持图片无缝滚动或文字无缝滚动</title>
+<meta name="description" content="jquery上下无缝滚动插件，可以任意配置图片上下无缝滚动和文字上下无缝滚动，当容器里面的高度未满时，图片或文字不进行无缝滚动。jquery插件,jquery下载。" />
+</head>
+
+<body>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+(function($){
+
+	$.fn.myScroll = function(options){
+	//默认配置
+	var defaults = {
+		speed:40,  //滚动速度,值越大速度越慢
+		rowHeight:24 //每行的高度
+	};
+	
+	var opts = $.extend({}, defaults, options),intId = [];
+	
+	function marquee(obj, step){
+	
+		obj.find("ul").animate({
+			marginTop: '-=1'
+		},0,function(){
+				var s = Math.abs(parseInt($(this).css("margin-top")));
+				if(s >= step){
+					$(this).find("li").slice(0, 1).appendTo($(this));
+					$(this).css("margin-top", 0);
+				}
+			});
+		}
+		
+		this.each(function(i){
+			var sh = opts["rowHeight"],speed = opts["speed"],_this = $(this);
+			intId[i] = setInterval(function(){
+				if(_this.find("ul").height()<=_this.height()){
+					clearInterval(intId[i]);
+				}else{
+					marquee(_this, sh);
+				}
+			}, speed);
+
+			_this.hover(function(){
+				clearInterval(intId[i]);
+			},function(){
+				intId[i] = setInterval(function(){
+					if(_this.find("ul").height()<=_this.height()){
+						clearInterval(intId[i]);
+					}else{
+						marquee(_this, sh);
+					}
+				}, speed);
+			});
+		
+		});
+
+	}
+
+})(jQuery);
+
+$(function(){
+
+	$("div.ranklist").myScroll({
+		speed:40,
+		rowHeight:26
+	});
+	
+});
+</script>	
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+a,a:visited{color:#5e5e5e; text-decoration:none;}
+a:hover{color:#b52725;text-decoration:underline;}
+.clear{display:block;overflow:hidden;clear:both;height:0;line-height:0;font-size:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif;}
+.demo{width:600px;margin:20px auto;border:solid 1px #ddd;padding:0 10px;}
+.demo h2{font-size:14px;color:#333;height:30px;line-height:30px;padding:15px 0;color:#3366cc;}
+/* ranklist */
+.ranklist{height:200px;overflow:hidden;}
+.ranklist li{height:16px;line-height:16px;overflow:hidden;position:relative;padding:0 70px 0 30px;margin:0 0 10px 0;}
+.ranklist li em{background:url(images/mun.gif) no-repeat;width:20px;height:16px;overflow:hidden;display:block;position:absolute;left:0;top:0;text-align:center;font-style:normal;color:#333;}
+.ranklist li em{background-position:0 -16px;}
+.ranklist li.top em{background-position:0 0;color:#fff;}
+.ranklist li .num{position:absolute;right:0;top:0;color:#999;}
+</style>
+
+<div class="demo">
+	<h2>jquery上下无缝滚动插件 列表溢出高度时 自动上下无缝滚动</h2>
+	<div class="ranklist">
+		<ul>
+			<li class="top">
+				<em>01</em><p><a href="http://www.17sucai.com/" target="_blank">js图片左右无缝滚动用鼠标控制图片滚动</a></p><span class="num">32万下载</span>
+			</li>
+			<li class="top">
+				<em>02</em><p><a href="http://www.17sucai.com/" target="_blank">js无缝滚动制作js文字无缝滚动和js图片无缝滚动</a></p><span class="num">32万下载</span>
+			</li>
+			<li class="top">
+				<em>03</em><p><a href="http://www.17sucai.com/" target="_blank">jquery 滚动 kxbdSuperMarquee插件支持图片与文字无缝滚动 图片翻滚 焦点图左右切换 banner广告制作</a></p><span class="num">32万下载</span>
+			</li>
+			<li>
+				<em>04</em><p><a href="http://www.17sucai.com/" target="_blank">javascript滚动图片插件支持单排图片上下滚动、图片无缝滚动</a></p><span class="num">32万下载</span>
+			</li>
+			<li>
+				<em>05</em><p><a href="http://www.17sucai.com/" target="_blank"> javascript滚动图片带按钮控制上下左右自动无缝滚动</a></p><span class="num">32万下载</span>
+			</li>
+			<li>
+				<em>06</em><p><a href="http://www.17sucai.com/" target="_blank">jquery hover图片插件制作鼠标滑过标题单个展开图片效果</a></p><span class="num">32万下载</span>
+			</li>
+			<li>
+				<em>07</em><p><a href="http://www.17sucai.com/" target="_blank">flash图片特效3D立体动画焦点图片切换带左右按钮控制滚动</a></p><span class="num">32万下载</span>
+			</li>
+			<li>
+				<em>08</em><p><a href="http://www.17sucai.com/" target="_blank">js lazyload实现网页图片延迟加载特效</a></p><span class="num">32万下载</span>
+			</li>
+			<li>
+				<em>09</em><p><a href="http://www.17sucai.com/" target="_blank">FlippingBook电子杂志书去版权,翻页图片全部外调 站长珍藏版</a></p><span class="num">32万下载</span>
+			</li>
+			<li>
+				<em>10</em><p><a href="http://www.17sucai.com/" target="_blank">门户网站jquery广告控制flash或图片顶部广告显示隐藏</a></p><span class="num">32万下载</span>
+			</li>
+		</ul>
+	</div>
+	
+	<h2>jquery上下无缝滚动插件 列表条数不够高度 不上下无缝滚动</h2>
+	<div class="ranklist">
+		<ul>
+			<li class="top">
+				<em>01</em><p><a href="http://www.17sucai.com/" target="_blank">js图片左右无缝滚动用鼠标控制图片滚动</a></p><span class="num">32万下载</span>
+			</li>
+			<li class="top">
+				<em>02</em><p><a href="http://www.17sucai.com/" target="_blank">js无缝滚动制作js文字无缝滚动和js图片无缝滚动</a></p><span class="num">32万下载</span>
+			</li>
+			<li class="top">
+				<em>03</em><p><a href="http://www.17sucai.com/" target="_blank">jquery 滚动 kxbdSuperMarquee插件支持图片与文字无缝滚动 图片翻滚 焦点图左右切换 banner广告制作</a></p><span class="num">32万下载</span>
+			</li>
+			<li>
+				<em>04</em><p><a href="http://www.17sucai.com/" target="_blank">javascript滚动图片插件支持单排图片上下滚动、图片无缝滚动</a></p><span class="num">32万下载</span>
+			</li>
+			<li>
+				<em>05</em><p><a href="http://www.17sucai.com/" target="_blank"> javascript滚动图片带按钮控制上下左右自动无缝滚动</a></p><span class="num">32万下载</span>
+			</li>
+		</ul>
+	</div>
+	
+</div>
+
+</body>
+</html>

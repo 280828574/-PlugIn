@@ -1,0 +1,39 @@
+﻿@charset "utf-8";
+html, body, div, ul, ol, li{margin:0;padding:0;}
+html{width:100%;/*background:#ad0833*/}
+body{font:13px/20px "Hiragino Sans GB", "Microsoft Yahei", "SimHei"}
+.body{display:block; width:1000px; margin:0 auto;}
+img{vertical-align:middle;}
+ul{list-style-type:none;}
+a:link, a:visited{outline:none;text-decoration:none;color:#7f7f7f;}
+a:hover, a:focus{text-decoration:none;color:#000;}
+a img, :link img, :visited img{border:0;}
+
+/* 本特效css样式 */
+.banner{width:1000px;padding-top:510px;}
+.banner li{list-style:none;}
+.banner ul li{float:left;}
+
+.wrapper{position:relative;width:1026px;margin:0 auto;}
+.section4{height:auto;margin-top:20px;}
+.section4 .banner ul li{height:auto;}
+.section4 .dots{position:absolute;width:1007px;height:auto;top:0px;text-align:center;font-size:15px;background:#fff;}
+.section4 .dot{float:left;line-height:504px;width:auto;cursor:pointer;}
+.section4 .dot1{width:71px;background:url(../images/flb01_03.jpg) no-repeat;}
+.section4 .dot1.active{background:url(../images/flb_03.jpg) no-repeat;}
+.section4 .dot2{width:95px;background:url(../images/flb01_04.jpg) no-repeat;}
+.section4 .dot2.active{background:url(../images/flb_04.jpg) no-repeat;}
+.section4 .dot3{width:117px;background:url(../images/flb01_05.jpg) no-repeat;}
+.section4 .dot3.active{background:url(../images/flb_05.jpg) no-repeat;}
+.section4 .dot4{width:134px;background:url(../images/flb01_06.jpg) no-repeat;}
+.section4 .dot4.active{background:url(../images/flb_06.jpg) no-repeat;}
+.section4 .dot5{width:176px;background:url(../images/flb01_07.jpg) no-repeat;}
+.section4 .dot5.active{background:url(../images/flb_07.jpg) no-repeat;}
+.section4 .dot6{width:134px;background:url(../images/flb01_08.jpg) no-repeat;}
+.section4 .dot6.active{background:url(../images/flb_08.jpg) no-repeat;}
+.section4 .dot7{width:115px;background:url(../images/flb01_09.jpg) no-repeat;}
+.section4 .dot7.active{background:url(../images/flb_09.jpg) no-repeat;}
+.section4 .dot8{width:95px;background:url(../images/flb01_10.jpg) no-repeat;}
+.section4 .dot8.active{background:url(../images/flb_10.jpg) no-repeat;}
+.section4 .dot9{width:70px;background:url(../images/flb01_11.jpg) no-repeat;}
+.section4 .dot9.active{background:url(../images/flb_11.jpg) no-repeat;}

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery+css3点击触发循环高亮显示 - 站长素材</title>
+
+
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{background:#f9f9f9 url(images/ricepaper2.jpg) repeat top left;color:#333;font-family:Georgia, serif;font-size:13px;}
+a{color:#fff;text-decoration:none;}
+</style>
+
+<!--主要样式-->
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<noscript>
+	<link rel="stylesheet" type="text/css" href="css/noscript.css" />
+</noscript>
+
+<script type="text/javascript" src="js/modernizr.custom.72835.js"></script>
+
+</head>
+<body>
+
+<div style="width:520px;margin:40px auto 0 auto;">
+	<a href="#" id="circle" class="ec-circle">
+		<h3>鼠标悬停</h3>
+	</a>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="js/jquery.circlemouse.js"></script>
+<script type="text/javascript">
+$(function() {
+
+$('#circle').circlemouse({
+	onMouseEnter: function( el ) {
+	
+		el.addClass('ec-circle-hover');
+	
+	},
+	onMouseLeave: function( el ) {
+		
+		el.removeClass('ec-circle-hover');
+		
+	},
+	onClick: function( el ) {
+		
+		alert('clicked');
+		
+	}
+});
+
+});
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>

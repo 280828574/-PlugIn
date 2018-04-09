@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery横向手风琴效果 - xw素材网</title>
+</head>
+<style>
+*{padding:0; margin:0; list-style:none;}
+.flash{ width:1120px; height:260px; margin:50px auto; padding:10px; box-shadow:0 0 10px #000;}
+.flash .con{ width:1120px; height:260px;}
+.flash .con ul li{ width:46px; height:260px; position:relative; overflow:hidden; float:left;}
+.flash .con ul li.current{ width:970px;}
+.flash .con ul li h3{ width:16px; height:230px; color:#fff; font-family:"微软雅黑"; font-size:16px; padding:15px;}
+.flash .con ul li.ti1 h3{ background:#C30;}
+.flash .con ul li.ti2 h3{ background:#F0F;}
+.flash .con ul li.ti3 h3{ background:#09F;}
+.flash .con ul li.ti4 h3{ background:#0F9;}
+.show{ position:absolute; left:46px; top:0; width:880px; height:200px; padding:30px 12px 30px 32px;}
+.show img{ width:200px; height:200px; margin-right:20px; box-shadow:0 0 10px #000; float:left;-webkit-animation:zq 2s infinite; animation:zq 2s infinite; border-radius:50%;}
+@keyframes zq{ from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+@-webkit-keyframes zq{ from{-webkit-transform:rotate(0deg);}
+to{-webkit-transform:rotate(360deg);}
+}
+</style>
+<body>
+<div class="flash">
+	<div class="con">
+		<ul>
+			<li class="current ti1">
+				<h3>关于我们</h3>
+				<div class="show">
+					<img src="images/big_1.jpg"/>
+					<img src="images/big_2.jpg"/>
+					<img src="images/big_3.jpg"/>
+					<img src="images/big_4.jpg"/>
+				</div>
+			</li>
+			<li class="ti2">
+				<h3>联系我们</h3>
+				<div class="show">
+					<img src="images/big_5.jpg"/>
+					<img src="images/big_6.jpg"/>
+					<img src="images/big_7.jpg"/>
+					<img src="images/big_8.jpg"/>
+				</div>
+			</li>
+			<li class="ti3">
+				<h3>给我留言</h3>
+				<div class="show">
+					<img src="images/big_1.jpg"/>
+					<img src="images/big_3.jpg"/>
+					<img src="images/big_5.jpg"/>
+					<img src="images/big_7.jpg"/>
+				</div>
+			</li>
+			<li class="ti4">
+				<h3>网站首页</h3>
+				<div class="show">
+					<img src="images/big_2.jpg"/>
+					<img src="images/big_4.jpg"/>
+					<img src="images/big_6.jpg"/>
+					<img src="images/big_8.jpg"/>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+var timer=null;
+var i=0;
+$(function(){
+	$(".flash .con ul li").mouseover(function(){
+		clearInterval(timer);
+	});
+	$(".flash .con ul li").click(function(){
+		$(this).stop().animate({width:"970px"},300).siblings().stop().animate({width:"46px"},300)
+	});
+	$(".flash .con ul li").mouseout(function(){
+		timer=setInterval("startMove()",2000)
+	});
+})
+function startMove(){
+  i++;
+  if(i>$(".flash .con ul li").length-1){i=0}
+  $(".flash .con ul li").stop().eq(i).animate({width:"970px"},300).siblings().stop().animate({width:"46px"},300)
+};
+timer=setInterval("startMove()",2000)
+</script>
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://www.xwcms.net/" target="_blank">xw素材网</a></p>
+</div>
+</body>
+</html>

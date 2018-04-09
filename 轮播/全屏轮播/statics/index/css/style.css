@@ -1,0 +1,49 @@
+﻿body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,iframe{margin:0;padding:0;}
+body,button,input,select,textarea{font:12px/1.5 \5b8b\4f53,arial,simsun,sans-serif;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+address,cite,dfn,em,var,i{font-style:normal;}
+code,kbd,pre,samp{font-family:courier new,courier,monospace;}
+small{font-size:12px;}
+ul,ol{list-style:none;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+fieldset,img{border:0;}
+iframe,img{vertical-align:middle;}
+button,input,select,textarea{font-size:100%;}
+table{border-collapse:collapse;border-spacing:0;}
+input,textarea,select,button{outline:none;resize:none;}
+a{color:#333;text-decoration:none;/*outline:none*/}
+a:hover{color:#598b00;text-decoration:underline;}
+.clearfix:after,.clear:after,.clx:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
+.clearfix,.clear,.clx{*zoom:1;}
+.left,.fl,.mark{float:left}
+.right,.fr,.subMark{float:right}
+.spanclass,.contentdiv,.hide{display:none;}
+.show{display:block;}
+
+.tc{text-align:center;}
+.tr{text-align:right;}
+
+.white{color:#fff;}
+.red{color:#f03;}
+.blue{color:#0033ff;}
+
+body{min-width:960px;color:#333;background:#e5e5e5;}
+.container{width:960px;margin:0 auto;}
+
+
+.banner{background:#1f262f;}
+.banner .container{position:relative;z-index:5;height:350px;margin-bottom:-350px;background:url(#);}
+.banner .btn_use{width:212px;height:64px;display:block;line-height:99;overflow:hidden;position:absolute;top:296px;left:538px;background:url(#);}
+
+.banner .focus{height:586px;position:relative;}
+.banner .focus .f_pic{width:100%;height:586px;}
+.banner .focus .focus_0{background:url(http://wy.city.qq.com/statics/index/images/banner_0.jpg) center 0 no-repeat;}
+.banner .focus .focus_1{background:url(http://wy.city.qq.com/statics/index/images/banner_1.jpg) center 0 no-repeat;}
+.banner .focus .focus_2{background:url(http://wy.city.qq.com/statics/index/images/banner_2.jpg) center 0 no-repeat;}
+.banner .focus .focus_3{background:url(http://wy.city.qq.com/statics/index/images/banner_3.jpg) center 0 no-repeat;}
+.banner .focus .pagination{bottom:10px;left:0;position:absolute;width:100%;text-align:center;}
+.banner .focus .pagination .toc{display:inline-block;margin:0 3px;width:15px;height:5px;line-height:99;overflow:hidden;background:#fff;}
+.banner .focus .pagination .selected{background:#82c900;}
+
+.wrap{background:url(../images/bg_wrap.png) 0 0 repeat-x;}

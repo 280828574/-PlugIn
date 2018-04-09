@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>sessionStorage</title>
+</head>
+
+<body>
+  <script>
+    // 给sessionStorage 中添加一组数据
+    window.sessionStorage.setItem('name',"佟丽娅");
+    window.sessionStorage.setItem('age',18);
+    window.sessionStorage.setItem('married',false);
+
+    // 获取sessionStorage的key对应的值
+    // var name = window.sessionStorage.getItem('name');
+    // console.log(name); 
+
+    // 移除sessionStorage中的数据 通过key
+    // window.sessionStorage.removeItem('name'); 
+
+    // 清除数据
+    // window.sessionStorage.clear(); 
+
+    // 通过在sessionStorage中的索引获取key
+    // var key = window.sessionStorage.key(0);
+    // console.log(key);
+  </script>
+</body>
+
+</html>

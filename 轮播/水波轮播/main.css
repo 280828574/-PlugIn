@@ -1,0 +1,58 @@
+@charset "utf-8";
+* { margin: 0; padding: 0;list-style:none}
+.box { width: 1200px; margin: 0 auto; clear: both; position: relative;}
+.trademark-bgcolor {background: #f6f6f6}
+.index-videor{width:702px;float:left;margin-left:10px;height:390px}
+.index-videor-a{border-bottom:1px solid #ececec;height:40px;overflow:hidden;background:#fff;}
+.index-videor-ba{background:#fff;float:left;width:116px;height:116px;border-right:1px solid #ececec;border-bottom:1px solid #ececec;position:relative;cursor:pointer}
+.index-videslide { position: relative; }
+.index-videslide .hd { position: absolute; top: -30px; right: 20px;}
+.index-videslide .hd li{width:8px;height:8px;border-radius:8px;background:#151515;display:inline-block;cursor:pointer;margin:0 2px}
+.index-videslide .hd li.on{background:#eb0c1c;}
+.dh-01{animation:breath 0.5s linear 0ms}
+.dh-02{animation:breath 0.5s linear 100ms}
+.dh-03{animation:breath 0.5s linear 200ms}
+.dh-04{animation:breath 0.5s linear 300ms}
+.dh-05{animation:breath 0.5s linear 400ms}
+.dh-06{animation:breath 0.5s linear 500ms}
+.dh-07{animation:breath 0.5s linear 100ms}
+.dh-08{animation:breath 0.5s linear 200ms}
+.dh-09{animation:breath 0.5s linear 300ms}
+.dh-10{animation:breath 0.5s linear 400ms}
+.dh-11{animation:breath 0.5s linear 500ms}
+.dh-12{animation:breath 0.5s linear 600ms}
+.dh-13{animation:breath 0.5s linear 200ms}
+.dh-14{animation:breath 0.5s linear 300ms}
+.dh-15{animation:breath 0.5s linear 400ms}
+.dh-16{animation:breath 0.5s linear 500ms}
+.dh-17{animation:breath 0.5s linear 600ms}
+.dh-18{animation:breath 0.5s linear 700ms}
+@keyframes breath
+{
+ from{transform:rotateY(0deg)}
+ 50%{transform:rotateY(180deg)}
+ to{transform:rotateY(0deg)}
+}
+
+@-moz-keyframes breath /* Firefox */
+{
+ from{transform:rotateY(0deg)}
+ 50%{transform:rotateY(180deg)}
+ to{transform:rotateY(0deg)}
+}
+
+@-webkit-keyframes breath /* Safari 和 Chrome */
+{
+ from{transform:rotateY(0deg)}
+ 50%{transform:rotateY(180deg)}
+ to{transform:rotateY(0deg)}
+}
+
+@-o-keyframes breath /* Opera */
+{
+ from{transform:rotateY(0deg)}
+ 50%{transform:rotateY(180deg)}
+ to{transform:rotateY(0deg)}
+}
+
+

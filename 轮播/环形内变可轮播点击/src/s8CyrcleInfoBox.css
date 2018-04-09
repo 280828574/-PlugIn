@@ -1,0 +1,101 @@
+.circleWrapper {
+    width: 75%;
+    height: 75%;
+    border-radius: 100%;
+    position: relative;
+    margin: 50px auto;
+}
+
+ul.circleWrapper{
+    list-style-type: none;
+    padding: 0;
+    display: block;
+}
+
+ul.circleWrapper li{
+    display: block;
+}
+.circleFeature {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    border-radius: 100%;
+    text-align: center;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    z-index: 99999;
+    width: 23%;
+    height: 23%;
+}
+
+.circleBox {
+    width: 50%;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 50%;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: none;
+
+}
+
+ul.circleWrapper li:first-child .circleBox {
+    display: block;
+}
+
+.circleSelect {
+    padding: 6px;
+    box-sizing: content-box;
+}
+.circleFeature span{
+    vertical-align: middle;
+    display: inline-block;
+}
+@media screen and (max-width: 768px) {
+    .circleWrapper:not(.noResponsive) {
+        border-radius: 0;
+        border:none;
+        width: 100%;
+    }
+
+    .circleWrapper:not(.noResponsive) li {
+        margin-bottom: 20px;
+    }
+    .circleBox:not(.noResponsive){
+        padding: 16px 10px;
+        display: block !important;
+        position: static;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+    .circleFeature:not(.noResponsive){
+        position: static;
+        display: block ;
+        width: 75px;
+        height: 75px;
+        line-height: 75px !important;
+        margin: auto;
+        -webkit-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -o-transform: none !important;
+        transform: none !important;
+    }
+
+}

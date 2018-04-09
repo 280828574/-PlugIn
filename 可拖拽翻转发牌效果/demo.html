@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <div id="projects">
+    <div class="grid">
+      <div class="projects">
+        <div class="project ">
+          <div class="mask">
+            <div class="back"></div>
+            <div class="front"></div>
+          </div>
+        </div>
+        <div class="project ">
+          <div class="mask">
+            <div class="back"></div>
+            <div class="front"></div>
+          </div>
+        </div>
+        <div class="project ">
+          <div class="mask">
+            <div class="back"></div>
+            <div class="front"></div>
+          </div>
+        </div>
+        <div class="project ">
+          <div class="mask">
+            <div class="back"></div>
+            <div class="front"></div>
+          </div>
+        </div>
+        <div class="project ">
+          <div class="mask">
+            <div class="back"></div>
+            <div class="front"></div>
+          </div>
+        </div>
+        <div class="project ">
+          <div class="mask">
+            <div class="back"></div>
+            <div class="front"></div>
+          </div>
+        </div>
+        <div class="project ">
+          <div class="mask">
+            <div class="back"></div>
+            <div class="front"></div>
+          </div>
+        </div>
+        <div class="project ">
+          <div class="mask">
+            <div class="back"></div>
+            <div class="front"></div>
+          </div>
+        </div>
+        <div class="project ">
+          <div class="mask">
+            <div class="back"></div>
+            <div class="front"></div>
+          </div>
+        </div>
+        <div class="controls">
+          <span class="bottom"></span>
+          <span class="bottom"></span>
+          <span class="bottom"></span>
+          <div class="mask">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+  $(function(){
+    $('.controls').click(function(){
+      if($(this).hasClass('show')){
+        $(this).removeClass('show');
+        subMove();
+      }else{
+        $(this).addClass('show');
+        addMove();
+      }
+    })
+  })
+
+
+  function addMove(){
+    $('.project').each(function(index,item){
+      setTimeout(function(){
+       $(item).addClass('ani'+ index);
+     },index*300);
+    })
+  }
+
+  function subMove(){
+    $('.project').each(function(index,item){
+       $(item).removeClass('ani'+ index);
+    })
+  }
+</script>

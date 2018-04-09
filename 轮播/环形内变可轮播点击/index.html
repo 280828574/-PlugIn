@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery节点分布圆形循环信息展示</title>
+
+<link rel="stylesheet" type="text/css" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="src/s8CyrcleInfoBox.css" media="screen" charset="utf-8">
+<link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
+
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4">
+			<p class="title">Cyrcleinfo with Default Value</p>
+			<div class="circle1">
+				<ul class="circleWrapper wStyle1">
+					<li>
+						<div class="circleFeature fStyle1" data-cyrcleBox="f1">Box1</div>
+						<div class="circleBox" id="f1"> Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+							Eveniet,
+							dolorem.
+						</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle1" data-cyrcleBox="f2">Box2</div>
+						<div class="circleBox" id="f2">Lorem ipsum dolor sit.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle1" data-cyrcleBox="f3">Box3</div>
+						<div class="circleBox" id="f3"> Lorem ipsum dolor sit amet, consectetur.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle1" data-cyrcleBox="f4">Box4</div>
+						<div class="circleBox" id="f4"><strong>Lorem ipsum dolor</strong> sit amet, consectetur
+							adipisicing
+							elit. Eveniet,Lorem ipsum dolor sit amet, consectetur. dolorem.
+						</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle1" data-cyrcleBox="f5">Box5</div>
+						<div class="circleBox" id="f5">, consectet Lorem ipsum dolor.ur adipisicing
+							elit.
+							Eveniet, dolorem.
+						</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle1" data-cyrcleBox="f6">Box6</div>
+						<div class="circleBox" id="f6"> Lorem ipsum Lorem ipsum dolor sit. g elit. Eveniet,
+							dolorem.
+						</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle1" data-cyrcleBox="f7">Box7</div>
+						<div class="circleBox" id="f7"> Lorem ipsum Lorem ipsum dolor sit amet, consectetur adipisicing.
+							iet,
+							dolorem.
+						</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle1" data-cyrcleBox="f8">Box8</div>
+						<div class="circleBox" id="f8"> Lorem ipsum Lorem ipsum. adipisicing elit. Eveniet,
+							dolorem.
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--Circle 2-->
+		<div class="col-sm-4">
+			<p class="title">Clickable without autoSlide</p>
+			<div class="circle2">
+				<ul class="circleWrapper wStyle2">
+					<li>
+						<div class="circleFeature fStyle2" data-cyrcleBox="cf1"><span
+								class="fa fa-cloud-upload fa-2x"></span></div>
+						<div class="circleBox innerStyle2" id="cf1"><strong>box1</strong><br>Lorem ipsum dolor sit amet,
+							consectetur adipisicing elit. Natus, omnis.
+						</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle2" data-cyrcleBox="cf2"><span
+								class="fa fa-envelope fa-2x"></span></div>
+						<div class="circleBox innerStyle2" id="cf2"><strong>box2</strong><br>Lorem ipsum donsectetur
+							adipisicing elit. Natus, omnis.
+						</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle2" data-cyrcleBox="cf3"><span
+								class="fa fa-desktop fa-2x"></span></div>
+						<div class="circleBox innerStyle2" id="cf3"><strong>box3</strong><br>Lorem ipsum met.
+							consectetur adipisicing elit. Natus, omnis.
+						</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle2" data-cyrcleBox="cf4"><span class="fa fa-coffee fa-2x"></span>
+						</div>
+						<div class="circleBox innerStyle2" id="cf4"><strong>box4</strong><br>Lorem ipsum dolor sit amet,
+							cons ectetur adipisicing elit. Natus, omnis.
+						</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle2" data-cyrcleBox="cf5"><span class="fa fa-cog fa-2x"></span>
+						</div>
+						<div class="circleBox innerStyle2" id="cf5"><strong>box5</strong><br>Lorem lor sit amet,
+							consectetur adipisicing elit. Natus, omnis.
+						</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle2" data-cyrcleBox="cf6"><span
+								class="fa fa-commenting fa-2x"></span></div>
+						<div class="circleBox innerStyle2" id="cf6"><strong>box6</strong><br>Lorem ipisicing. nsectetur
+							adipisicing elit. Natus, omnis.
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<p class="title">500ms speed and Not Responsive</p>
+			<div class="circle3">
+				<ul class="circleWrapper wStyle3">
+					<li>
+						<div class="circleFeature fStyle3" data-cyrcleBox="c3f1"><strong>1</strong></div>
+						<div class="circleBox innerStyle3" id="c3f1"><strong>One</strong></div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle3" data-cyrcleBox="c3f2"><strong>2</strong></div>
+						<div class="circleBox innerStyle3" id="c3f2"><strong>two</strong></div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle3" data-cyrcleBox="c3f3"><strong>3</strong></div>
+						<div class="circleBox innerStyle3" id="c3f3"><strong>Three</strong></div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle3" data-cyrcleBox="c3f4"><strong>4</strong></div>
+						<div class="circleBox innerStyle3" id="c3f4"><strong>Four</strong></div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle3" data-cyrcleBox="c3f5"><strong>5</strong></div>
+						<div class="circleBox innerStyle3" id="c3f5"><strong>Five</strong></div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle3" data-cyrcleBox="c3f6"><strong>6</strong></div>
+						<div class="circleBox innerStyle3" id="c3f6"><strong>Six</strong></div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle3" data-cyrcleBox="c3f7"><strong>7</strong></div>
+						<div class="circleBox innerStyle3" id="c3f7"><strong>Seven</strong></div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle3" data-cyrcleBox="c3f8"><strong>8</strong></div>
+						<div class="circleBox innerStyle3" id="c3f8"><strong>Eight</strong></div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle3" data-cyrcleBox="c3f9"><strong>9</strong></div>
+						<div class="circleBox innerStyle3" id="c3f9"><strong>Nine</strong></div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle3" data-cyrcleBox="c3f10"><strong>10</strong></div>
+						<div class="circleBox innerStyle3" id="c3f10"><strong>Ten</strong></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!--second Row for show the Spread Type-->
+	<h1 style="padding: 33px;
+	text-align: center;
+	color: #00b786;">LEFT RIGHT TOP DOWN "The Four Type For Bubble Spread"</h1>
+	<div class="row">
+		<div class="col-lg-3 col-sm-6">
+			<p class="title">Right Style</p>
+			<div class="circle4">
+				<ul class="circleWrapper wStyle4">
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c4f1"><span class="fa fa-male fa-3x"></span></div>
+						<div class="circleBox" id="c4f1">Lorem ipsum dolor sit.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c4f2"><span class="fa fa-link fa-3x"></span></div>
+						<div class="circleBox" id="c4f2">Lorem Lorem ipsum dolor sit.ipsum dolor sit.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c4f3"><span class="fa fa-key fa-3x"></span></div>
+						<div class="circleBox" id="c4f3">Lorem Lorem Lorem ipsum dolor.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c4f4"><span class="fa fa-globe fa-3x"></span></div>
+						<div class="circleBox" id="c4f4">Lorem Lorem Lorem Lorem ipsum dolor sit amet, consectetur. ipsum dolor.</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-3 col-sm-6">
+			<div class="circle5">
+				<p class="title">Left Style</p>
+				<ul class="circleWrapper wStyle4">
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c5f1"><span class="fa fa-male fa-3x"></span></div>
+						<div class="circleBox" id="c5f1">Lorem ipsum dolor sit.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c5f2"><span class="fa fa-link fa-3x"></span></div>
+						<div class="circleBox" id="c5f2">Lorem Lorem ipsum dolor sit.ipsum dolor sit.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c5f3"><span class="fa fa-key fa-3x"></span></div>
+						<div class="circleBox" id="c5f3">Lorem Lorem Lorem ipsum dolor.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c5f4"><span class="fa fa-globe fa-3x"></span></div>
+						<div class="circleBox" id="c5f4">Lorem Lorem Lorem Lorem ipsum dolor sit amet, consectetur. ipsum dolor.</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-3 col-sm-6">
+			<p class="title">Top Style</p>
+			<div class="circle6">
+				<ul class="circleWrapper wStyle4">
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c6f1"><span class="fa fa-male fa-3x"></span></div>
+						<div class="circleBox" id="c6f1">Lorem ipsum dolor sit.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c6f2"><span class="fa fa-link fa-3x"></span></div>
+						<div class="circleBox" id="c6f2">Lorem Lorem ipsum dolor sit.ipsum dolor sit.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c6f3"><span class="fa fa-key fa-3x"></span></div>
+						<div class="circleBox" id="c6f3">Lorem Lorem Lorem ipsum dolor.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c6f4"><span class="fa fa-globe fa-3x"></span></div>
+						<div class="circleBox" id="c6f4">Lorem Lorem Lorem Lorem ipsum dolor sit amet, consectetur. ipsum dolor.</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-lg-3 col-sm-6">
+			<p class="title">bottom Style</p>
+			<div class="circle7">
+				<ul class="circleWrapper wStyle4">
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c7f1"><span class="fa fa-male fa-3x"></span></div>
+						<div class="circleBox" id="c7f1">Lorem ipsum dolor sit.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c7f2"><span class="fa fa-link fa-3x"></span></div>
+						<div class="circleBox" id="c7f2">Lorem Lorem ipsum dolor sit.ipsum dolor sit.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c7f3"><span class="fa fa-key fa-3x"></span></div>
+						<div class="circleBox" id="c7f3">Lorem Lorem Lorem ipsum dolor.</div>
+					</li>
+					<li>
+						<div class="circleFeature fStyle4" data-cyrcleBox="c7f4"><span class="fa fa-globe fa-3x"></span></div>
+						<div class="circleBox" id="c7f4">Lorem Lorem Lorem Lorem ipsum dolor sit amet, consectetur. ipsum dolor.</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-1.11.0.min.js"></script>
+<script src="src/s8CyrcleInfoBox.js" type="text/javascript"></script>
+<script>$(".circle1").s8CircleInfoBox()</script>
+<script>$(".circle2").s8CircleInfoBox({
+	autoSlide: false,
+	action: "click"
+})</script>
+<script>$(".circle3").s8CircleInfoBox({
+	notResponsive: true,
+	hoverStyle:"circleSelect3",
+	slideSpeed: 500,
+	breakpoint: 0
+
+})</script>
+<script>$(".circle4").s8CircleInfoBox({
+	hoverStyle: "circleSelect4",
+	spreadStyle: "right"
+})</script>
+<script>$(".circle5").s8CircleInfoBox({
+	hoverStyle: "circleSelect4",
+	spreadStyle: "left"
+})</script>
+<script>$(".circle6").s8CircleInfoBox({
+	hoverStyle: "circleSelect4",
+	spreadStyle: "top"
+})</script>
+<script>$(".circle7").s8CircleInfoBox({
+	hoverStyle: "circleSelect4",
+	spreadStyle: "bottom"
+})</script>
+
+</body>
+</html>

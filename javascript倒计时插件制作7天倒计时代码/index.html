@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>7天倒计时实例</title>
+
+<script type="text/javascript" src="js/timecountdown.min.js"></script>
+<script type="text/javascript">
+var time=new Date().getTime()/1000+(60*60*24*7)
+xcsoft.countdown(time,function(obj){
+	document.getElementById("id100").innerHTML=obj.day;
+	document.getElementById("id101").innerHTML=obj.hour;
+	document.getElementById("id102").innerHTML=obj.minute;
+	document.getElementById("id103").innerHTML=obj.second;
+});
+</script>
+
+<style>
+*{padding:0; margin:0; font-family:"微软细黑"}
+body{padding-top:50px;}
+div{display:inline-block; width:200px; height:200px; text-align:center; vertical-align:middle; line-height:200px; font-size:150px; background:#36F; color:#ffffff; border-radius:150px;}
+div#id101{background:#930}
+div#id102{background:#336}
+div#id103{background:#840}
+a{display:inline-block; background:#C60; color:#FFF; padding:0 30px; text-align:center; font-size:30px;}
+</style>
+
+<a id="time">7天倒计时</a>
+<div id="id100"></div>
+<a>天</a>
+<div id="id101"></div>
+<a>时</a>
+<div id="id102"></div>
+<a>分</a>
+<div id="id103"></div>
+<a>秒,敬请期待...</a>
+
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+*{ margin:0; padding:0;}
+html{min-width: 1150px;}
+body{ font-family: "微软雅黑"; font-size:12px; margin:0 auto; color: DDD2D2; position: relative;}
+li{ list-style:none;}
+ul,dl,dd,h1,h2,h3,h4,h5,h6,form,p{ margin:0; padding:0;}
+/*ul{ list-style:none;}*/
+a{ text-decoration:none; display:block;}
+/*a:hover{ color:#FF0000;}*/
+#clearfloat{ clear:both; height:0px; font-size:1px; padding:0;}
+body button{border: none;}
+
+/*--------------------------------------------------------------------------------------------------------------------*/
+.main{ width:100%; height:auto;}
+#float01{ height:800px; background:#FFFFFF}
+div.bg_top{ 
+width:100%; 
+height:50px; 
+position: fixed; 
+top:0; 
+z-index:100; 
+background-color:rgba(0,0,0,0.7);
+}
+div.floatCtro{ 
+width:1150px; 
+height:50px; 
+margin: auto;
+}
+div.floatCtro ul{ 
+height:50px; 
+float: right;}
+div.floatCtro li{ 
+padding: 10px 20px; 
+font-family:'微软雅黑'; 
+font-size:13pt; 
+color:#FFFFFF; 
+cursor:pointer; 
+float: left; 
+margin-top: 6px;
+border-radius: 3px 3px 3px 3px; 
+margin-left: 5px;
+}
+div.floatCtro li:hover{ 
+background-color:rgba(255,255,255,0.2); 
+color:#fff;
+}
+div.floatCtro li.cur{ 
+background-color:rgba(255,255,255,0.2); 
+color:#fff;
+}
+	
+.fl05_contentall{ 
+width:1197px; 
+margin:auto; 
+overflow:hidden;
+}
+.picon{
+clear:both;
+height:444px; 
+padding-left:4px; 
+overflow:hidden; 
+background:#fff; 
+position:relative;}
+.picon ul{
+position:absolute;
+top:0;
+left:0;
+height:444px;
+width:3000px;
+}
+.picon li{
+float:left;
+height:444px;
+width:200px;
+position:relative;
+overflow:hidden;
+}
+.picon li.cur div{
+display:block;
+}	
+
+
+
+.bg1{
+width: 828px;
+height: 150px;
+margin: auto;
+margin-top: 50px;
+}
+.trian_textb{
+width: 260px;
+margin-top: 140px;
+margin-left: -130px;
+text-align: center;
+color: white;
+font-weight: bold;
+font-size: 20px;
+}
+.trian_texta{
+width: 260px;
+margin-top: -170px;
+margin-left: -130px;
+text-align: center;
+color: white;
+font-weight: bold;
+font-size: 20px;
+}
+.triangle1,.triangle3,.triangle5,.triangle7{
+border-top:200px solid black; 
+border-left: 130px solid transparent; 
+border-right: 130px solid transparent; 
+width: 0; height: 0;
+float: left;
+border-top: 200px solid rgba(0, 0, 0, 0.8);
+display:none;
+margin-top: -10px;
+}
+.triangle2,.triangle4,.triangle6{
+border-bottom:200px solid black; 
+border-left: 130px solid transparent; 
+border-right: 130px solid transparent; 
+width: 0; height: 0;
+float: left;
+margin-left: -110px;
+border-bottom: 200px solid rgba(0, 0, 0, 0.8);
+margin-top: 10px;
+display:none;
+}
+.triangle3,.triangle5,.triangle7{
+margin-left: -110px;
+}
+
+.floatCtro i{
+color: white;
+font-size: 40px;
+line-height: 50px;
+}
+.floatCtro span{
+font-family: "楷体";
+color: white;
+font-weight: bold;
+font-size: 25px;
+line-height: 50px;
+}
+.fl01_contentall{
+width: 100%;
+height: 600px;
+background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.2) ), url(../img/main-banner.jpg) no-repeat center 0;
+}	
+.fl01_contentall h1{
+font-size: 64px;
+font-weight: 400;
+color: white;
+padding-top: 130px;
+padding-bottom: 20px;
+text-align: center;
+}
+.fl01_contentall h2{
+font-size: 22px;
+font-weight: 200;
+color: white;
+padding-bottom: 20px;
+text-align: center;
+}
+.triangleall{
+width: 1200px;
+height: 200px;
+margin: auto;
+margin-top: 45px;
+}
+	
+	
+	

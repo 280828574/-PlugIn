@@ -1,0 +1,200 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>jQuery右侧悬浮固定客服代码 - 站长素材</title>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<style type="text/css">
+	body{
+		position: relative;
+		background: #EFF2F4;
+		font: normal 13px "宋体" !important;
+	}
+	body,div,ul,li,p,a,img{
+		padding: 0;
+		margin: 0;
+	}
+	/*右侧悬浮菜单*/
+	.slide{
+		width: 50px;
+		height: 200px;
+		position: fixed;
+		top: 50%;
+		margin-top: -126px;
+		background: #018D75;
+		right: 0;
+		border-radius: 5px 0 0 5px;
+		z-index: 999;
+	}
+	.slide ul{
+		list-style: none;
+	}
+	.slide .icon li{
+		width: 49px;
+		height: 50px;
+		background: url(img/icon.png) no-repeat;
+	}
+	.slide .icon li.top{
+		background: url(img/top.png) no-repeat;
+		background-position:10px 15px ;
+	}	
+	.slide .icon li.qq{
+		background-position:-385px -73px ;
+	}
+	.slide .icon li.tel{
+		background-position:-385px -160px ;
+	}
+	.slide .icon li.wx{
+		background-position:-385px -120px ;
+	}
+	
+	.slide .info{
+		top: 50%;
+		height: 147px;
+		position: absolute;
+		right: 100%;
+		background: #018D75;
+		width: 0px;
+		overflow: hidden;
+		margin-top: -73.5px;
+		transition:0.5s;
+		border-radius:4px 0 0 4px ;
+	}
+	.slide .info.hover{
+		width: 145px;
+		
+	}
+	.slide .info li{
+		width: 145px;
+		color: #CCCCCC;
+		text-align: center;
+	}
+	.slide .info li p{
+		font-size: 1.1em;
+		line-height: 2em;
+		padding: 15px;
+		text-align: left;
+	}
+	.slide .info li.qq p a{
+		display: block;
+		margin-top: 12px;
+		width: 100px;
+		height: 32px;
+		line-height: 32px;
+		color: #00DFB9;
+		font-size: 16px;   
+		text-align: center;
+		text-decoration: none;
+		border: 1px solid #00DFB9;
+		border-radius: 5px;
+	}
+	.slide .info li.qq p a:hover{
+		color: #FFFFFF;
+		border: none;
+		background: #00E0DB;
+	}
+	.slide .info li div.img{
+		height: 100%;
+		background: #DEFFF9;
+		margin: 15px;
+	}
+	.slide .info li div.img img{
+		width: 100%;
+		height: 100%;
+	}
+	/*控制菜单的按钮*/
+	.index_cy{
+		width: 30px;
+		height: 30px;
+		background: url(img/index_cy.png);
+		position: fixed;
+		right: 0;
+		top: 45%;
+		margin-top: 140px;
+		background-position: 62px 0;
+		cursor: pointer;
+	}
+	.index_cy2{
+		width: 30px;
+		height: 30px;
+		background: url(img/index_cy.png);
+		position: fixed;
+		right: 0;
+		top: 45%;
+		margin-top: 140px;
+		background-position: 30px 0;
+		cursor: pointer;
+	}
+	
+	/*自适应 当屏小于1050时隐藏*/
+	@media screen and (max-width: 1050px) {
+		.slide{
+			display: none;
+		}
+		#btn{
+			display: none;
+		}
+		
+	}
+</style>
+</head>
+<body>
+
+<div style="height:2000px;"></div>
+
+<!--右侧悬浮菜单-->
+<div class="slide">
+	<ul class="icon">
+		
+		<li class="qq"></li>
+		<li class="tel"></li>
+		<li class="wx"></li>
+		<a href="#"><li class="top"></li></a>
+	</ul>
+	<ul class="info">
+		<li class="qq">
+			<p>在线沟通，请点我<a href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" target="_blank">在线咨询</a></p>
+		</li>
+		<li class="tel">
+			<p>咨询热线：<br>400-800-8888<br>客服qq：<br>123456789</p>
+		</li>
+		<li class="wx">
+			<div class="img"><img src="img/1441956938.png" /></div>
+		</li>
+	</ul>
+</div>
+<div id="btn" class="index_cy"></div>
+
+<script type="text/javascript">
+$(function(){
+
+	$('.slide .icon li').not('.up,.down,.top').mouseenter(function(){
+		$('.slide .info').addClass('hover');
+		$('.slide .info li').hide();
+		$('.slide .info li.'+$(this).attr('class')).show();//.slide .info li.qq
+	});
+	$('.slide').mouseleave(function(){
+		$('.slide .info').removeClass('hover');
+	});
+	
+	$('#btn').click(function(){
+		$('.slide').toggle();
+		if($(this).hasClass('index_cy')){
+			$(this).removeClass('index_cy');
+			$(this).addClass('index_cy2');
+		}else{
+			$(this).removeClass('index_cy2');
+			$(this).addClass('index_cy');
+		}
+		
+	});
+	
+});
+</script>
+
+<div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+<p>来源：<a href="http://sc.chinaz.com/" target="_blank">站长素材</a></p>
+</div>
+</body>
+</html>

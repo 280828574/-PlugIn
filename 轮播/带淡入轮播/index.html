@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	
+.content-wrap {
+	width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 5px 0;
+	background: none repeat scroll 0 0 #ffffff;
+}
+.slide-wrap {
+	width: 1000px;
+	height: 172px;
+	overflow: hidden;
+}
+.flexslider {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.flexslider .slides > li {
+	display: none;
+	-webkit-backface-visibility: hidden;
+}
+.flexslider .slides .img {
+	width: 100%;
+	display: block;
+	position: relative;
+}
+.flexslider .slides img {
+	width: 1000px;
+	height: 172px;
+	display: block;
+}
+.slides:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/*html[xmlns] .slides {
+	display: block;
+}
+* html .slides {
+	height: 172px;
+}
+.no-js .slides > li:first-child {
+	display: block;
+}*/
+.flexslider {
+	margin: 0 auto;
+	width: 1000px;
+	zoom: 1;
+	height: 172px;
+	overflow: hidden;
+}
+/*.flex-viewport {
+	max-height: 172px;
+	-webkit-transition: all 5s ease;
+	-moz-transition: all 5s ease;
+	transition: all 5s ease;
+}*/
+.flexslider .slides {
+	zoom: 1;
+}
+.flex-direction-nav {
+	/**height: 0;*/
+}
+.flex-direction-nav a {
+	width: 60px;
+	height: 90px;
+	margin: -30px 0 0;
+	display: block;
+	
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	cursor: pointer;
+	text-indent: -9999px;
+	opacity: 0;
+	filter:alpha(opacity=0);
+	-webkit-transition: all .3s ease;
+}
+.flex-direction-nav .flex-next {
+	right: 10px;
+	width: 50px;
+	height: 50px;
+	background: url(../images/bg.png) no-repeat scroll 0 0 transparent;
+	text-indent: -10000px;
+	cursor: pointer;
+}
+.flex-direction-nav .flex-prev {
+	left: 10px;
+	width: 50px;
+	height: 50px;
+	background: url(../images/bg.png) no-repeat scroll 0 -50px transparent;
+	text-indent: -10000px;
+	cursor: pointer;
+}
+.flexslider:hover .flex-next {
+	opacity: 0.8;
+	filter:alpha(opacity=25);
+}
+.flexslider:hover .flex-prev {
+	opacity: 0.8;
+	filter:alpha(opacity=25);
+}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+	opacity: 1;
+	filter:alpha(opacity=50);
+}
+.flex-control-nav {
+	width: 170px;
+	position: absolute;
+	bottom: 8px;
+	right: 5px;
+	text-indent: -1000px;
+}
+.flex-control-nav li {
+	margin: 0 2px;
+	display: inline-block;
+	zoom: 1;
+/*	*display: inline;*/
+	float: left;
+}
+.flex-control-paging li a {
+	background: url(images/bg.png) no-repeat scroll -66px -4px transparent;
+	display: block;
+	overflow: hidden;
+	text-indent: -1000px;
+	cursor: pointer;
+	width: 17px;
+	height: 17px;
+}
+.flex-control-paging li a.flex-active {
+	background: url(images/bg.png) no-repeat scroll -98px -5px transparent;
+}
+.slide-btn {
+	position: absolute;
+	left: 95px;
+	bottom: 15px;
+	width: 95px;
+	height: 25px;
+	background: url(images/bg.png) no-repeat scroll -66px -29px transparent;
+	z-index: 1;
+}
+.slide-btn a {
+	display: block;
+	width: 80px;
+	height: 25px;
+	color: #FFFFFF;
+	padding-left: 15px;
+	font-size: 14px;
+}	
+</style>
+<script src="jquery-1.11.1.min.js"></script>
+<script src="slider.js"></script>
+</head>
+
+<body>
+<div id="slide_wrap" class="slide-wrap">
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<div class="img"><a href="#"><img src="img/slide01.jpg"></a><div class="slide-btn"><a href="#">去看看</a></div></div>
+					</li>
+					<li>
+						<div class="img"><a href="#"><img src="img/slide01.jpg"></a><div class="slide-btn"><a href="#">立即购买</a></div></div>
+					</li>
+					<li>
+						<div class="img"><a href="#"><img src="img/slide01.jpg"></a><div class="slide-btn"><a href="#">去看看</a></div></div>
+					</li>
+					<li>
+						<div class="img"><a href="#"><img src="img/slide01.jpg"></a><div class="slide-btn"><a href="#">立即购买</a></div></div>
+					</li>
+					<li>
+						<div class="img"><a href="#"><img src="img/slide01.jpg"></a><div class="slide-btn"><a href="#">去看看</a></div></div>
+					</li>
+                    <li>
+						<div class="img"><a href="#"><img src="img/slide01.jpg"></a><div class="slide-btn"><a href="#">立即购买</a></div></div>
+					</li>
+					<li>
+						<div class="img"><a href="#"><img src="img/slide01.jpg"></a><div class="slide-btn"><a href="#">去看看</a></div></div>
+					</li>
+				</ul>
+			</div>
+        </div>
+        <script type="text/javascript">
+			$(function(){
+			  $('.flexslider').flexslider({
+				animation: "slide",
+				slideshowSpeed:7000,
+				animationSpeed:4000,
+				//direction:"vertical"
+			 });
+			});
+		</script>
+
+
+
+</body>
+</html>

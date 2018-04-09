@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+	<title>FancyBox 1.3.4 </title>
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css" media="screen">
+	<script src="Fancybox/jquery-1.11.1.min.js"></script>
+	<script src="fancybox/jquery.fancybox.js"></script>	
+<script>
+$(function(){
+	$("#various2").fancybox({
+				'width':750,		//设置iframe swf的宽度 默认560
+				'height':750,		//340
+				'autoScale':false,	//true  自适应浏览器窗口大小
+				'transitionIn':'none',
+				'transitionOut':'none',
+				'type':'iframe'
+			});
+});		
+</script>
+	
+</head>
+<body>
+	<a id="various2" href="fff.html">Iframe</a>
+</body>
+</html>

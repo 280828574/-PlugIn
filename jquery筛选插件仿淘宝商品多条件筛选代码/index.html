@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <script src="jquery-1.8.3.min.js"></script>
+    <link href="filter/Fliter.css" rel="stylesheet" />
+    <script src="filter/Filter.js"></script>
+</head>
+<body>
+<h4>例子1</h4>
+<h5>单选</h5>
+<div id="demo1"></div>
+<h5>多选</h5>
+<div id="demo2"></div>
+
+<h4>例子2</h4>
+<div id="demo3"></div>
+<div id="demo4"></div>
+<h4>例子3</h4>
+<div id="demo5"></div>
+<div id="demo6"></div>
+
+<h4>显示值</h4>
+<input id="demo_value" type="text" value="">
+<script type="text/javascript">
+var data=[
+    {
+        "id": 1,
+        "text": 1
+    },
+    {
+        "id": 2,
+        "text": 2
+    },
+    {
+        "id": 3,
+        "text": 3
+    },
+    {
+        "id": 4,
+        "text": 4
+    }]
+	//例子1
+	//单选
+    $('#demo1').comboboxfilter({
+        url: '',
+		scope: 'FilterQuery1',
+		data:data,
+		onChange:function(newValue){
+		$('#demo_value').val(newValue);
+		}
+    });
+  $('#demo2').comboboxfilter({
+        url: '',
+		scope: 'FilterQuery2',
+		multiple: true,
+		data:data,
+		onChange:function(newValue){
+		$('#demo_value').val(newValue);
+		}
+    });
+	 $('#demo3').comboboxfilter({
+        url: '',
+		scope: 'FilterQuery3',
+		data:data,
+		onChange:function(newValue){
+		$('#demo_value').val(newValue);
+		}
+    });
+  $('#demo4').comboboxfilter({
+        url: '',
+		scope: 'FilterQuery3',
+		multiple: true,
+		data:data,
+		onChange:function(newValue){
+		$('#demo_value').val(newValue);
+		}
+    });
+	 $('#demo5').comboboxfilter({
+        url: '',
+		scope: '',
+		unlimitText:'全部',
+		data:data,
+		onChange:function(newValue){
+		$('#demo_value').val(newValue);
+		}
+    });
+  $('#demo6').comboboxfilter({
+        url: '',
+		scope: '',
+		unlimitText:'全部',
+		multiple: true,
+		data:data,
+		onChange:function(newValue){
+		$('#demo_value').val(newValue);
+		}
+    });
+</script>
+</body>
+</html>
+
+

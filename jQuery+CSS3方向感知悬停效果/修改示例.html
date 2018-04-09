@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title></title>
+        
+        <!--搜索引擎优化-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Direction-Aware Hover Effect with CSS3 and jQuery" />
+        <meta name="keywords" content="hover, css3, jquery, effect, direction, aware, depending, thumbnails" />
+        <meta name="author" content="Codrops" />
+        
+        
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+		<noscript>
+			<style>
+				.da-thumbs li a div {
+					top: 0px;
+					left: -100%;
+					-webkit-transition: all 0.3s ease;
+					-moz-transition: all 0.3s ease-in-out;
+					-o-transition: all 0.3s ease-in-out;
+					-ms-transition: all 0.3s ease-in-out;
+					transition: all 0.3s ease-in-out;
+				}
+				
+				}
+			</style>
+		</noscript>
+    </head>
+    <body>
+			<section>
+				<ul id="da-thumbs" class="da-thumbs">
+					<li>
+						<a href="http://dribbble.com/shots/505046-Menu">
+							<img src="images/1.jpg" />
+							<div></div>
+						</a>
+					</li>
+				</ul>
+			</section>
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.hoverdir.js"></script>
+		
+		<script type="text/javascript">
+			$(function() {
+			
+				$('li').hoverdir();
+
+			});
+		</script>
+    </body>
+</html>

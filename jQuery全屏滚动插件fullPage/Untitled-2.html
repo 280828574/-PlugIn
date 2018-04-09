@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link href="css/jquery.fullPage.css"  rel="stylesheet">
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<style>
+#fp-nav ul li a.active span,  
+.fp-slidesNav ul li a.active span {  
+    background: #fff; /*这里设置的是活动导航的颜色*/
+}  
+#fp-nav ul li a span,  
+.fp-slidesNav ul li a span {  
+    border: 1px solid #fff;/*这里设置的是非活动导航的颜色*/  
+} 
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    top: 2px;
+    left: 2px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #FFF;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+} 
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    display: block;
+    width: 15px;
+    height: 13px;
+    margin: 20px;
+    position:relative;
+} 
+</style>
+</head>
+<body>
+<div id="fullpage">
+    <div class="section">
+    第一屏幕	
+    </div>
+    <div class="section">第二屏</div>
+    <div class="section">第三屏</div>
+    <div class="section">第四屏</div>
+   	<div class="section">
+    	<div class="slide">第五屏的第一屏</div>
+        <div class="slide">第五屏的第二屏</div>
+    </div>
+</div>
+</body>
+<script src="js/Untitled-1.js"></script>
+</html>

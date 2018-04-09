@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	.nav_left{background: #232b35;height: 100%;width: 220px;min-height: 600px;position: fixed;top: 100px;left: 0;}
+	.nav_leftlist h2{height: 50px;line-height: 50px;padding-left: 40px;font-size: 16px;background: #3b444f;color: #999999;position: relative;cursor: pointer;}
+	
+	
+	.nav_leftlist dl{display: none;}
+	.nav_leftlist dl dt{height: 50px;line-height: 50px;background: #2c3643;font-size: 16px;color: #ffffff;padding-left: 60px;position: relative;cursor: pointer;}
+	.nav_leftlist dl dd{display: none;}
+	.nav_leftlist dl dd a{display: block;height: 50px;line-height: 50px;color: #fff;padding-left: 80px;font-size: 16px;position: relative;}
+	.nav_leftlist dl dd a.cur{color: #ee581c;}
+</style>
+</head>
+<body>
+	<div class="nav_left">
+    <div class="nav_leftlist">
+        <h2>用户系统</h2>
+        <dl>
+            <dt>用户管理</dt>
+            <dd>
+                <a href="javaScript:" class="a1">商户信息</a>
+                <a href="javaScript:" class="a1">用户信息</a>
+            </dd>
+        </dl>
+    </div>
+    <div class="nav_leftlist">
+        <h2>财务系统</h2>
+        <dl>
+            <dt>系统账务</dt>
+            <dd>
+                <a href="javaScript:" class="a1">平台账单</a>
+                <a href="javaScript:" class="a1">账单明细</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>商户账务</dt>
+            <dd>
+                <a href="javaScript:" class="a1">商户账单</a>
+                <a href="javaScript:" class="a1">提现管理</a>
+            </dd>
+        </dl>
+        <dl>
+            <dt>用户账务</dt>
+            <dd>
+                <a href="javaScript:" class="a1">用户账单</a>
+                <a href="javaScript:" class="a1">提现管理</a>
+            </dd>
+        </dl>
+    </div>
+</div>
+	<script type="text/javascript" src="jquery-1.11.1.min.js" ></script>
+<script type="text/javascript" >
+    $(function(){
+        $('.nav_leftlist').on('click', 'h2', function(event) {
+            $(this).siblings('dl').toggle();
+			$(this).siblings('dl').find("dd").css("display","none");
+			$(".a1").removeClass("cur");
+           
+        });
+        $('.nav_leftlist').on('click', 'dl dt', function(event) {
+            $(this).siblings('dd').toggle();
+			
+           
+        });
+		 $('.a1').click(function(){
+			    $(".a1").removeClass("cur")
+				$(this).addClass("cur")
+           
+        });
+		
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>canvas雷达图-B5教程网www.bcty365.com</title>
+
+<!-- 雷达图 -->
+<script src="Chart.js"></script>
+<!-- End -->
+
+<style>
+</style>
+</head>
+<body>
+
+<div style="width:100%;height: 500px; display:block; margin:100px auto;background: #CCAE75;">
+ <canvas id="myChart" width="800" height="800" style="padding: 15px;box-sizing: border-box;max-width: 100%;max-height: 800px"></canvas>
+    <script>
+                        var a=5;
+                        var radarChartData = {
+                            labels: ["力量", "格局", "坚韧", "智慧",'勇气' ],
+                            datasets: [
+
+
+                                {
+                                    label: "变形玩具金刚4",
+                                    fillColor: "#B79258",//连接区域颜色
+                                    strokeColor: "#B79258",//连接区域边框颜色
+                                    pointColor: "#D1B280",//圆点颜色
+                                    pointStrokeColor: "#fff",//圆点边框
+                                    pointHighlightFill: "#fff",//选中点颜色
+                                    pointHighlightStroke: "#fff",//选中点边框颜色
+                                    data: [10,10,10,10,10]
+                                }
+                            ]
+                        };
+                        window.onload = function(){
+                            window.myRadar = new Chart(document.getElementById("myChart").getContext("2d")).Radar(radarChartData, {
+                                responsive: true
+                            });
+                        }
+                    </script>
+</div>
+</body>
+</html>

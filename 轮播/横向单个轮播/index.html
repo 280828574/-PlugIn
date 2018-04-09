@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<script src="jquery-1.11.1.min.js"></script>
+<script src="lrscrollnew.js"></script>
+<style>
+
+
+.ui_scroller_container {
+    height: 132px;
+    position: relative;
+    width: 1000px;
+	padding-bottom: 12px;
+}
+.ui_scroller {
+	margin: 0 35px;
+	overflow: hidden;
+	width: 930px;
+	 position: relative;
+}
+.ui_scroller ul {
+    margin: 0;
+    padding: 0;
+}
+.scrollPics {
+    height: 132px;
+    width: 930px;
+}
+.scrollPics li {
+    float: left;
+    height: 132px;
+    text-align: center;
+    width: 310px;
+}
+.scrollPics li a {
+    border: 1px solid #EAEAEA;
+	display: inline-block;
+	width: 300px;
+	height: 130px;
+}
+.ui_scroller_prev, .ui_scroller_next {
+	height: 132px;
+	top: 0;
+	width: 30px;
+	position: absolute;
+	display: block;
+	z-index: 10;
+}
+.ui_scroller_prev {
+    background: url(images/bg.png) no-repeat scroll -301px -83px transparent;
+    left: 0px;
+}
+.ui_scroller_next {
+	background: url(images/bg.png) no-repeat scroll -403px -83px transparent;
+	right: 0px;
+}	
+</style>
+</head>
+
+<body>
+
+ <div class="bottom-slide">
+	<div class="ui_scroller_container">
+		<div class="ui_scroller">
+			<ul class="scrollPics" >
+				<li><a href="#" title="1" target="_blank"><img src="img/bottom-slide.jpg" alt="" /></a></li>
+				<li><a href="#" title="2" target="_blank"><img src="img/bottom-slide.jpg" alt="" /></a></li>
+				<li><a href="#" title="3" target="_blank"><img src="img/bottom-slide.jpg" alt="" /></a></li>
+				<li><a href="#" title="4" target="_blank"><img src="img/bottom-slide.jpg" alt="" /></a></li>
+				<li><a href="#" title="5" target="_blank"><img src="img/bottom-slide.jpg" alt="" /></a></li>
+				<li><a href="#" title="6" target="_blank"><img src="img/bottom-slide.jpg" alt="" /></a></li>
+			</ul>
+		</div> 
+		<a class="ui_scroller_prev" href="javascript:;"></a>
+		<a class="ui_scroller_next" href="javascript:;"></a> 
+	</div>
+ </div>              
+
+
+<script language="javascript">
+
+$(function() {
+	$(".ui_scroller").jCarouselLite({
+		btnNext: ".ui_scroller_next",
+		btnPrev: ".ui_scroller_prev"
+	});
+});
+</script>
+</body>
+</html>

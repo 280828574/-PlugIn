@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	.article{
+	width: 100%;
+	height: 1000px;
+	font: 24px/1.5 'Microsoft YaHei';
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: cover;
+}
+.section1{
+  color: white;
+	background-image: url( http://www.alloyteam.com/wp-content/uploads/2014/01/section01.jpg);
+}
+.section2{
+  color: #FF8500;
+	background-image: url( http://www.alloyteam.com/wp-content/uploads/2014/01/section02.jpg);
+}
+.section3{
+  color: #747474;
+	background-image: url( http://www.alloyteam.com/wp-content/uploads/2014/01/section03.jpg);
+}
+	
+</style>
+
+<script src="jquery-1.11.1.min.js"></script>
+<script>
+	$(function(){
+		var a=$(window).height() 
+		$(".article").css("height",a)
+		
+	})
+</script>
+</head>
+
+<body>
+	<div class="article section1">
+			每当我加班凌晨，独自一人走在黑暗的回家路上
+	</div>
+	<div class="article section2">
+			我会想起那天夕阳下的奔跑
+	</div>
+	<div class="article section3">
+			那是我逝去的，青春
+	</div>
+
+</body>
+
+</html>

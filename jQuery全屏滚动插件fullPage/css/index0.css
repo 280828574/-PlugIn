@@ -1,0 +1,124 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0; padding:0; list-style:none; font-family:微软雅黑;}
+ul{ margin:0; padding:0;}
+#x01{
+	height:auto;
+}
+.row .col-md-8{
+	margin:0;
+	padding:0;
+}
+.row{
+	margin:0;
+	padding:0;
+}
+.col-md-6{
+	margin:0;
+	padding:0;
+}
+.col-md-4{
+	margin:0;
+	padding:0;
+}
+.col-md-12{
+	margin:0;
+	padding:0;
+}
+.list{ 
+	overflow:hidden;
+}
+.list li{
+	position:relative;
+	width:100%;
+}
+.ios{
+	background-image:url(../image/201702151451211820.jpg) 
+}
+.list li .content{
+	position:absolute;
+	top:30%;
+	left:0;
+	color:#FFF;
+}
+.content{
+	width:100%;
+}
+.proname{
+	text-align:center;
+}
+.slogan{
+	margin-top:5%;
+	font-size:70px;
+	text-align:center;
+}
+.downoload{
+	margin-top:3%;
+	text-align:center;
+}
+.aaa{
+	font-size:22px;
+	text-align:center;
+	color:#FFF;
+	line-height:200%
+}
+.downoload_main{
+	display:inline-block;
+	width:8%;
+	border:solid 1px #FFF;
+}
+.love{ color:#FFF;
+	text-align:center;
+	margin-top:3%;
+	font-size:24px
+}
+.downoload_main:hover{
+	background-color:rgba(245,245,245,0.3);
+	cursor:pointer;	
+}		
+.aaa:hover{
+	text-decoration:none;
+	color:#FFF;	
+}
+.aaa:visited{
+	text-decoration:none;	
+}			
+@media screen and (max-width: 1080px) {
+ .proname{font-size: 1.4em; }
+	.slogan { 
+	font-size:40px; }
+	.aaaa{font-size:22px;}
+	 
+}
+@media screen and (max-width: 1000px) {
+	.proname { font-size: 1.25em; }
+		.slogan { 
+		font-size:20px; } 
+		.aaa{font-size:1.1em; color:#093;} 
+}
+@media screen and (max-width: 804px) {
+	.proname { font-size: 1em; }
+		.slogan { 
+		font-size:16px; }
+		.aaa { 
+		font-size:0.5em; color:#fcc; } 
+@media screen and (max-width: 768px){
+	.proname { font-size: 0.8em; }
+		.slogan {font-size:10px; }
+		.aaa { 
+		font-size:1.0em; color:#f66;}
+}
+@media screen  and (max-width: 480px){
+	.proname { font-size: 0.8em; }
+		.slogan {font-size:10px; }
+		.aaa{ 
+		 font-size:0.5em; color:#FFF;  }
+}
+
+.clearfix:after { 
+content: "." ; 
+display: block ;
+height: 0 ;
+clear: both ;
+visibility: hidden ;
+}

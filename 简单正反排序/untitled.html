@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	.a1{width: 30px;height: 30px;background: red;margin-bottom: 15px;}	
+</style>
+</head>
+
+<body>
+<button>点我</button>
+	<div class="a1">0</div>
+	<div class="a1">1</div>
+	<div class="a1">2</div>
+	<div class="a1">3</div>
+<script src="jquery-1.11.1.min.js"></script>
+<script>
+	$(function(){
+	$("button").click(function(){
+		var arr = [];
+		$('.a1').each(function() {
+			arr.push($(this).text());
+		})
+		
+		arr.reverse();
+		
+		var b=arr.length;
+		
+		for(i=0;i<=b-1;i++){
+			$(".a1").eq(i).text(arr[i])
+		}
+		
+	})
+})	
+</script>
+</body>
+</html>

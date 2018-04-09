@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+	<head>
+		<title>自动获取天气插件</title>
+		<meta charset="utf-8">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.leoweather.min.js"></script>
+	</head>
+	
+	<body>
+	
+		<div class="welcome-info">
+			<div>尊敬的会员<span id="weather"></span></div>
+		</div>
+		
+		<script type="text/javascript">
+			$('#weather').leoweather({format:'，{时段}好！，<span id="colock">现在时间是：<strong>{年}年{月}月{日}日 星期{周} {时}:{分}:{秒}</strong>，</span> <b>{城市}天气</b> {天气} {夜间气温}℃ ~ {白天气温}℃'});
+		</script>
+		
+	</body>
+</html>

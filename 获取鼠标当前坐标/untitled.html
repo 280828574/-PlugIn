@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+	*{margin: 0;padding: 0}	
+	p{position: absolute;top: 0;left: 0;}
+	img{width: 100%;height: 100%}
+</style>
+</head>
+
+<body style="margin: 0;padding: 0">
+
+<p></p>
+<img src="IMG_0001.JPG">
+<img src="IMG_0001.JPG">
+
+<script src="jquery-1.11.1.min.js"></script>
+<script>
+$(function(){
+	$('body').mousemove(function(e) {  
+	var xx=e.pageX;
+	var yy=e.pageY;
+	$("p").text('left:'+xx + '---top:' + yy);
+	$("p").offset({left:xx,top:yy+20}); 
+}); 
+});
+</script>
+</body>
+</html>
