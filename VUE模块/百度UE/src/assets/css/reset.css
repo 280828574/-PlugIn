@@ -1,0 +1,38 @@
+/* CSS Document */
+*{
+	padding: 0;
+	margin: 0;
+	text-decoration:none;
+	list-style: none;
+	font-family: 微软雅黑;
+	outline: none;
+	font-size: 0.14rem;
+}
+.icon{
+	width: 2em;
+	height: 2em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
+.yd-btn-primary{
+  margin-top: 0;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"],input[type="data"]{
+  -moz-appearance: textfield!important
+}
+.xwb_my_fwzx_fwptxy_text{
+  width: 100% !important;;
+  height: 4rem!important;;
+  overflow: auto!important;
+}
+.xwb_my_fwzx_fwptxy_text::-webkit-scrollbar {
+  width: 1px;
+  height: 1px;
+  background-color: #FAFAFA;
+}
