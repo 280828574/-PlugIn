@@ -1,0 +1,61 @@
+html,
+body {
+    font-family: "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    caption,
+    th,
+    td {
+        text-align: left;
+        vertical-align: middle;
+    }
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ol,
+ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+    text-decoration: none;
+}
+
+textarea {
+    resize: none;
+}
