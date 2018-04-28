@@ -12,7 +12,7 @@
     data(){
           return{
             childrens: {
-              name: '小强',
+              name: '小二',
               age: 20,
               sex: '男'
             },
