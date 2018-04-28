@@ -1,0 +1,49 @@
+html,
+body {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    position: relative;
+    background-color: #f7f7f7;
+}
+
+footer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    box-shadow: 0 2px 8px #ccc;
+    position: absolute;
+    background-color: #fff;
+}
+
+.ball-group {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.ball {
+    position: absolute;
+    visibility: hidden;
+    z-index: 100;
+    left: 0;
+    top: 0;
+}
+
+.ball .inner {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #FF6400;
+}
