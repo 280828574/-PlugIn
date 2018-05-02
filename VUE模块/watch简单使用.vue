@@ -12,7 +12,7 @@
     data(){
           return{
             childrens: {
-              name: '小二',
+              name: '小七',
               age: 20,
               sex: '男'
             },
@@ -20,6 +20,11 @@
             lastName:"张三"
           }
         },
+      methods:{
+          itemToggen:function () {
+              console.log(1);
+          }
+      },
     watch:{
       childrens:{
         handler:function(val,oldval){
@@ -34,7 +39,9 @@
 
       lastName:function(val,oldval){
         console.log(this.lastName)
-      }
+      },
+        //路由改变 触发函数itemToggen
+      '$route': 'itemToggen'
     },//以V-model绑定数据时使用的数据变化监测
   };
 </script>
