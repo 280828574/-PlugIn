@@ -2,20 +2,18 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import router from './router'
+import '../static/UE/ueditor.config.js'
+import '../static/UE/ueditor.all.min.js'
+import '../static/UE/lang/zh-cn/zh-cn.js'
+import '../static/UE/ueditor.parse.min.js'
 
 Vue.config.productionTip = false
 
-//路由
-import router from './router'
-
-//CSS初始化
-import reset from './assets/css/reset.css'
-
-//rem
-import rem from './assets/js/rem.js'
 /* eslint-disable no-new */
 new Vue({
+  el: '#app',
   router,
-  el:'#app',
-  render:h => h(App)
+  components: { App },
+  template: '<App/>'
 })
