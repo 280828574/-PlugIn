@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网友涛涛分享原创自定义滚动条美化jquery插件</title>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+
+.demo{height:300px;width:800px;margin:50px auto 30px auto;border:1px solid #4A5565;overflow:hidden;}
+/* slider */
+.slider{width:285px;height:500px;padding:10px 26px 10px 10px}
+.slider img{height:300px;width:230px;border:none;}
+
+/* 滚动条的样式 */
+.scrollUp,.scrollHandle,.scrollDown{overflow:hidden;background-image:url(images/ttscrollbar.png);background-repeat:no-repeat;_background-image:url(images/ttscrollbar.gif)}
+.scrollBar{height:100%;width:16px;background-repeat:repeat-y;background:url(images/ttscrollBarBg.png) top right;overflow:hidden;position:absolute;right:0;top:0;z-index:111}
+.scrollUp,.scrollDown{height:23px;cursor:pointer;position:absolute;left:1px;cursor:pointer}
+.scrollUp,.scrollHandle,.scrollHandleDown,.scrollDown{width:14px;position:absolute;}
+.scrollHandle{height:109px;background-position:-21px 0;left:1px;top:19px;cursor:n-resize;}
+.scrollUp{background-position:left -1px;top:0;}
+.scrollDown{background-position:0 -26px;bottom:0;}
+</style>
+
+</head>
+<body>
+
+
+
+<div class="demo">
+	<div id="txt" style='background:#F5F5F5;font-size:12px;padding:10px 20px 10px 10px;line-height:18px;color:#29292C'>
+<pre>
+/*	
+*  dom结构
+*  &lt;div style='height:300px;width:700px;' &gt;
+*	  &lt;div id="txt" class='txt' &gt;
+*	  &lt;/div&gt;
+*  &lt;/div&gt;
+*
+*  Javascript代码
+*  &lt;script src='ttScrollBar.js'&gt;&lt;/script&gt;
+*  &lt;script&gt;
+*  	var o=document.getElementById('txt');
+*  	var t= new ttScrollBar({
+*  		container:o, //要加滚动条的对象,(注意该对象的高度是否真实准确)
+*  		isBuffer:true, //是否开启缓冲效果
+*  		isMouseWheel:true, //是否开启鼠标滚动
+*  		isOpenKeyEvent:false, //是否支持键盘按键
+*  		rollScale:30, //缓冲最小单位值
+*  		focusObj:'scroll', //鼠标滚轮焦点对象 可选 document,'scroll','scrollBar',须开启isMouseWheel
+*  		scrollEventType:'mouseover', //mousedown,mouseover 两种类型
+*  		scrollBarClass:'scrollBar', //class名,在已有基础上添加class,多个请用空格格开
+*  		scrollUpClass:'scrollUp',
+* 		scrollHandleClass:'scrollHandle',
+*  		scrollDownClass:'scrollDown',
+*		scrollDValue:8 //滚动的差值,上下凹圆的尺寸和
+*	})
+*
+*
+*
+*/
+&lt;/script&gt;
+</pre>
+</div>
+</div>
+
+<div class="demo">
+	<div id="txt2" style='background:#F5F5F5;font-size:12px;padding:10px 20px 10px 10px;line-height:18px;color:#29292C'>
+<pre>
+/*	
+*  dom结构
+*  &lt;div style='height:300px;width:700px;' &gt;
+*	  &lt;div id="txt2" class='txt' &gt;
+*	  &lt;/div&gt;
+*  &lt;/div&gt;
+*
+*  Javascript代码
+*  &lt;script src='ttScrollBar.js'&gt;&lt;/script&gt;
+*  &lt;script&gt;
+*  	var o=document.getElementById('txt2');
+*  	var t= new ttScrollBar({
+*  		container:o, //要加滚动条的对象,(注意该对象的高度是否真实准确)
+*  		isBuffer:false, //是否开启缓冲效果
+*  		isMouseWheel:true, //是否开启鼠标滚动
+*  		isOpenKeyEvent:false, //是否支持键盘按键
+*  		rollScale:10, //缓冲最小单位值
+*  		focusObj:'scroll', //鼠标滚轮焦点对象 可选 document,'scroll','scrollBar',须开启isMouseWheel
+*  		scrollEventType:'mouseover', //mousedown,mouseover 两种类型
+*  		scrollBarClass:'scrollBar', //class名,在已有基础上添加class,多个请用空格格开
+*  		scrollUpClass:'scrollUp',
+* 		scrollHandleClass:'scrollHandle',
+*  		scrollDownClass:'scrollDown',
+*		scrollDValue:8 //滚动的差值,上下凹圆的尺寸和
+*	})
+*
+*   如果滚动容器的高度发生变化,(如数据动态加载和显示隐藏)可使用 resetLayout()方法
+*	如：t.resetLayout();
+*/
+&lt;/script&gt;
+</pre>
+</div>
+</div>
+
+<div class='demo slider'>
+	 <ul id='list'>
+	 	<li><a href="http://www.17sucai.com/"><img src='img/1.jpg' alt=''/></a></li>
+	 	<li><a href="http://www.17sucai.com/"><img src='img/2.jpg' alt=''/></a></li>
+	 	<li><a href="http://www.17sucai.com/"><img src='img/3.jpg' alt=''/></a></li>
+	 	<li><a href="http://www.17sucai.com/"><img src='img/4.jpg' alt=''/></a></li>
+	 	<li><a href="http://www.17sucai.com/"><img src='img/5.jpg' alt=''/></a></li>
+	 	<li><a href="http://www.17sucai.com/"><img src='img/6.jpg' alt=''/></a></li>
+	 </ul>
+</div>
+
+<script type="text/javascript" src='ttScrollBar.js'></script>
+<script type="text/javascript">
+//demo01
+var o=document.getElementById('txt');
+var t= new ttScrollBar({
+	container:o,	//要加滚动条的对象
+	isBuffer:true,				//是否开启缓冲效果
+	isMouseWheel:true,   		//是否开启鼠标滚动
+	isOpenKeyEvent:false,	//是否支持键盘按键
+	rollScale:30,				//缓冲最小单位值
+	focusObj:'scroll',			//鼠标滚轮焦点对象 可选 document,scroll,scrollBar
+	scrollEventType:'mouseover', //mousedown,mouseover 两种类型
+	scrollBarClass:'scrollBar',  //class
+	scrollUpClass:'scrollUp',
+	scrollHandleClass:'scrollHandle',
+	scrollDownClass:'scrollDown',
+	scrollDValue:8  	//滚动的差值,上下的和
+})
+
+//demo02
+var o2=document.getElementById('txt2');
+var t2= new ttScrollBar({
+	container:o2,	//要加滚动条的对象
+	isBuffer:false,				//是否开启缓冲效果
+	isMouseWheel:true,   		//是否开启鼠标滚动
+	isOpenKeyEvent:false,	//是否支持键盘按键
+	rollScale:10,				//缓冲最小单位值
+	focusObj:'scroll',			//鼠标滚轮焦点对象 可选 document,scroll,scrollBar
+	scrollEventType:'mousedown', //mousedown,mouseover 两种类型
+	scrollBarClass:'scrollBar',  //class
+	scrollUpClass:'scrollUp',
+	scrollHandleClass:'scrollHandle',
+	scrollDownClass:'scrollDown',
+	scrollDValue:8  	//滚动的差值,上下的和
+})
+
+/*测试 设置6秒后滚动条消失 */
+setTimeout(function(){
+	 o2.style.height='200px';
+	 o2.style.overflow='hidden';
+	 t2.resetLayout();
+},6000)
+
+//demo03
+var oList=document.getElementById('list');
+var t3= new ttScrollBar({
+	container:oList,	//要加滚动条的对象
+	isBuffer:true,				//是否开启缓冲效果
+	isMouseWheel:true,   		//是否开启鼠标滚动
+	isOpenKeyEvent:true,	//是否支持键盘按键
+	rollScale:60,				//缓冲最小单位值
+	focusObj:'scroll',			//鼠标滚轮焦点对象 可选 document,scroll,scrollBar
+	scrollEventType:'mousedown', //mousedown,mouseover 两种类型
+	scrollBarClass:'scrollBar',  //class
+	scrollUpClass:'scrollUp',
+	scrollHandleClass:'scrollHandle',
+	scrollDownClass:'scrollDown',
+	scrollDValue:8  	//滚动的差值,上下的和
+})
+</script>
+</body>
+</html>
