@@ -2,7 +2,6 @@
   <EasyScrollbar :barOption="myBarOption" style="width: 50%;margin: 0 auto">
     <div style="height: 300px;">
       <div  style="height: 500px;background-color: greenyellow;text-align: center;">
-
       </div>
     </div>
   </EasyScrollbar>
