@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html phone="1"> <!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk">
+    <meta name="viewport" content="width=750, user-scalable=no"/>
+    <title>二零一七年娱乐圈画传</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="js/ne.js"></script>
+    <link rel="stylesheet" href="css/style1.css"/>
+
+</head>
+<body>
+<h1>二零一七年娱乐圈画传</h1>
+<div class="ent_painting2017_wrap" id="ent_painting2017_wrap">
+    <canvas id="app" width="750" height="1206"></canvas>
+</div>
+<div class="collection">
+</div>
+<div class="cover">
+    <div class="water1"></div>
+    <div class="water2"></div>
+    <div class="people"></div>
+</div>
+<div class="gif">
+    <div class="animation1"></div>
+</div>
+<div id="start" class="hidden"></div>
+<div class="loading">
+    <div class="loading_icon">加 载 中</div>
+</div>
+<div class="backcover hidden">
+    <div class="namelist"></div>
+    <div class="return"></div>
+    <div class="copyright"></div>
+</div>
+<div class="music"></div>
+<div class="share"></div>
+<audio src="css/images/haoyunlai.mp3?3" id="audio" loop="loop"></audio>
+<script>
+
+    // 音频控制
+    audioAutoPlay("audio")
+
+    function audioAutoPlay(id) {
+        var audio = document.getElementById(id);
+        var play = function () {
+            document.removeEventListener("WeixinJSBridgeReady", play);
+            document.removeEventListener("YixinJSBridgeReady", play);
+            audio.play();
+        };
+
+        audio.play();
+        if (window.WeixinJSBridge) {
+            audio.play();
+        }
+        //weixin
+        if (typeof WeixinJSBridge == "undefined") {
+            document.addEventListener("WeixinJSBridgeReady", play, false);
+        } else {
+            //yixin
+            document.addEventListener('YixinJSBridgeReady', play, false);
+            audio.play();
+        }
+    }
+</script>
+<div id="common-loading">
+    <div id="common-loading-center"></div>
+</div>
+<div id="common-landscape">
+    <div id="common-landscape-center"></div>
+</div>
+<div id="common-pc">
+    <div id="common-pc-center"></div>
+</div>
+
+<script src="js/ent.js"></script>
+
+
+</body>
+</html>
