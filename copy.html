@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复制Demo</title>
+</head>
+
+<body>
+
+    <input type="text" class="form-control">
+    <div class="copyBtn" onclick='copycg("form-control")' style="cursor: pointer;">自定义复制内容</div>
+    <div class="copyBtn1" data-clipboard-target=".form-control" style="cursor: pointer;">复制指定内容</div>
+
+    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+    <script>
+        let copyBtn1 = new ClipboardJS(".copyBtn1");
+        copyBtn1.on("success", function (e) {
+            // 复制成功
+            alert('复制成功' + e.text);
+        });
+        function copycg(type) {
+            let url = type;
+            let copyBtn = new ClipboardJS(".copyBtn", {
+                text: function () {
+                    return url;
+                }
+            });
+            copyBtn.on("success", function (e) {
+                // 复制成功
+                alert('复制成功' + e.text);
+            });
+        }
+    </script>
+</body>
+
+</html>
